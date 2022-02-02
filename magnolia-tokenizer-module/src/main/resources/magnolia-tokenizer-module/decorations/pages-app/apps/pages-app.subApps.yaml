@@ -1,0 +1,25 @@
+browser:
+  actions:
+    mintPage:
+      icon: icon-import
+      $type: jcrCommandAction
+      command: mintPage
+      catalog: tokenizer
+      asynchronous: true
+  actionbar:
+    sections:
+      crud:
+        groups:
+          publish:
+            items:
+              - name: mintPage
+  workbench:
+    contentViews:
+      tree:
+        columns: &columns
+          tokenAddress:
+            name: tokenAddress
+          tokenUri:
+            name: tokenUri
+      list:
+        columns: *columns

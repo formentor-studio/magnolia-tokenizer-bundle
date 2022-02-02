@@ -1,0 +1,34 @@
+label: nft
+form:
+  properties:
+    title:
+      $type: textField
+      label: Title
+      required: true
+    author:
+      $type: textField
+      label: Author
+      required: true
+    asset:
+      $type: damLinkField
+      label: Asset
+      required: true
+    subject:
+      $type: textField
+      label: Author
+    description:
+      $type: textField
+      label: Description
+      rows: 5
+    tokenAddress:
+      $type: textField
+      label: Token address
+      readOnly: true
+    tokenId:
+      $type: textField
+      label: Token Id
+      readOnly: true
+    tokenUri:
+      $type: textField
+      label: Token Uri
+      readOnly: true

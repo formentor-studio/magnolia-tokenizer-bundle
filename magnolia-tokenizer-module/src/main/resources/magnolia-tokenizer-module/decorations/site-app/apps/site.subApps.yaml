@@ -1,0 +1,18 @@
+browser:
+  actions:
+    tokenizeSite:
+      icon: icon-import
+      #$type: jcrCommandAction
+      class: info.magnolia.ui.framework.action.ActivationActionDefinition
+      command: tokenizeSite
+      catalog: tokenizer
+      asynchronous: true
+      availability:
+        root: true
+  actionbar:
+    sections:
+      root:
+        groups:
+          activationActions:
+            items:
+              - name: tokenizeSite

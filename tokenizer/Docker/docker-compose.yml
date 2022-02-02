@@ -1,0 +1,32 @@
+version: "3.8"
+services:
+  besu:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    #    image: hyperledger/besu:latest
+    command: --miner-enabled --miner-coinbase=0xfe3b557e8fb62b89f4916b721be55ceb828dbd73 --rpc-http-cors-origins="all" --host-allowlist="*" --rpc-ws-enabled --rpc-http-enabled
+    ports:
+      - 8545:8545
+      - 8546:8546
+
+  ipfs:
+    image: ipfs/go-ipfs:latest
+    environment:
+      IPFS_PROFILE: server
+    volumes:
+      - type: volume
+        source: ipfs_data
+        target: /data/ipfs
+      - type: volume
+        source: ipfs_export
+        target: /export
+    ports:
+      - "4001:4001"
+      - "4001:4001/udp"
+      - "127.0.0.1:8080:8080"
+      - "127.0.0.1:5001:5001"
+
+volumes:
+  ipfs_export:
+  ipfs_data:

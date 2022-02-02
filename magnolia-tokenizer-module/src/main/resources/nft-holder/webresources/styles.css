@@ -1,0 +1,45 @@
+.header {
+
+}
+
+.header h1 {
+    font-family: Helvetica,"Helvetica Neue",Arial,"Lucida Grande",sans-serif;
+}
+
+.author {
+    font-weight: bold;
+    font-size: 1.4em;
+    font-family: Helvetica,"Helvetica Neue",Arial,"Lucida Grande",sans-serif;
+    color: grey;
+}
+
+.asset {
+    padding: 8px;
+    width: 800px;
+}
+
+.asset img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.subject {
+    font-weight: bold;
+    font-size: 1.3em;
+    font-family: Helvetica,"Helvetica Neue",Arial,"Lucida Grande",sans-serif;
+    color: black;
+}
+
+p {
+    font-family: Helvetica,"Helvetica Neue",Arial,"Lucida Grande",sans-serif;
+}
+
+.description {
+    margin-top: 30px;
+    width: 480px;
+}
+
+.description p {
+    font-size: 15px;
+    font-family: Helvetica,"Helvetica Neue",Arial,"Lucida Grande",sans-serif;
+}

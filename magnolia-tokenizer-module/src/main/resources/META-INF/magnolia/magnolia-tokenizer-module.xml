@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE module SYSTEM "module.dtd" >
+<module>
+  <name>magnolia-tokenizer-module</name>
+  <displayName>${project.name}</displayName>
+  <description>${project.description}</description>
+  <class>org.formentor.magnolia.tokenizer.TokenizerModule</class>
+  <versionHandler>org.formentor.magnolia.tokenizer.setup.TokenizerModuleVersionHandler</versionHandler>
+  <version>${project.version}</version>
+
+  <!-- For more information on module descriptor configuration options -->
+  <!-- https://documentation.magnolia-cms.com/display/DOCS/XML-based+module+descriptor -->
+  <components>
+    <id>main</id>
+    <component>
+      <type>org.formentor.magnolia.tokenizer.service.TokenizerServiceAssetImpl</type>
+      <implementation>org.formentor.magnolia.tokenizer.service.TokenizerServiceAssetImpl</implementation>
+    </component>
+    <component>
+      <type>org.formentor.magnolia.tokenizer.service.TokenizerServiceSiteImpl</type>
+      <implementation>org.formentor.magnolia.tokenizer.service.TokenizerServiceSiteImpl</implementation>
+    </component>
+    <component>
+      <type>org.formentor.tokenizer.domain.ethereum.Web3jProvider</type>
+      <implementation>org.formentor.magnolia.tokenizer.service.blockchain.ethereum.Web3jProviderImpl</implementation>
+    </component>
+    <component>
+      <type>org.formentor.tokenizer.domain.ethereum.CredentialsProvider</type>
+      <implementation>org.formentor.magnolia.tokenizer.service.blockchain.ethereum.CredentialsProviderImpl</implementation>
+    </component>
+    <component>
+      <type>org.formentor.magnolia.tokenizer.service.blockchain.TokenCollectionEthereumService</type>
+      <implementation>org.formentor.magnolia.tokenizer.service.blockchain.TokenCollectionEthereumService</implementation>
+    </component>
+    <component>
+      <type>org.formentor.magnolia.tokenizer.service.blockchain.OffChainIPFSService</type>
+      <implementation>org.formentor.magnolia.tokenizer.service.blockchain.OffChainIPFSService</implementation>
+    </component>
+  </components>
+  <dependencies>
+    <dependency>
+      <name>core</name>
+      <version>*</version>
+    </dependency>
+    <dependency> <!-- dependency required to decorate dam-app -->
+      <name>dam-app-jcr</name>
+      <version>*</version>
+    </dependency>
+    <!--  Add other dependencies here, e.g the mte (magnolia templating essentials).
+    <dependency>
+      <name>mte</name>
+      <version>0.7/*</version>
+    </dependency>
+    -->
+  </dependencies>
+</module>

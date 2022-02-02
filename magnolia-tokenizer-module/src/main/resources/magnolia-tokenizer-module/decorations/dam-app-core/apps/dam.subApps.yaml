@@ -1,0 +1,50 @@
+jcrBrowser:
+  actions:
+    tokenizeAssetFolder:
+      icon: icon-import
+      $type: jcrCommandAction
+      command: tokenizeCollection
+      catalog: tokenizer
+      asynchronous: true
+    mintAsset:
+      icon: icon-import
+      $type: jcrCommandAction
+      command: mintAsset
+      catalog: tokenizer
+      asynchronous: true
+  actionbar:
+    sections:
+      folder:
+        groups:
+          publish:
+            items:
+              - name: tokenizeAssetFolder
+      asset:
+        groups:
+          publish:
+            items:
+              - name: mintAsset
+  workbench:
+    contentViews:
+      tree:
+        columns: &columns
+          name:
+          tokenAddress:
+            name: tokenAddress
+          tokenUri:
+            name: tokenUri
+      list:
+        columns: *columns
+
+jcrDetail:
+  form:
+    properties:
+      tokenAddress:
+        $type: textField
+        readOnly: true
+      tokenId:
+        $type: textField
+        readOnly: true
+      tokenUri:
+        $type: textField
+        readOnly: true

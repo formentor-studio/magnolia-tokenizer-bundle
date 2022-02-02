@@ -1,0 +1,13 @@
+'nft-page':
+  'asset': 'jcr:20af8c1b-09b0-46da-8335-6f7d9819bb8b'
+  'author': 'Zeus'
+  'description': 'Photo of the galaxy.'
+  'jcr:primaryType': 'mgnl:page'
+  'jcr:uuid': '3a2b361d-0309-4062-9152-7cd35e0ccc59'
+  'mgnl:created': 2022-01-24T15:17:12.606Z
+  'mgnl:createdBy': 'superuser'
+  'mgnl:lastModified': 2022-01-24T15:17:12.606Z
+  'mgnl:lastModifiedBy': 'superuser'
+  'mgnl:template': 'nft-holder:pages/nft'
+  'subject': 'Zeus'
+  'title': 'This is a galaxy'

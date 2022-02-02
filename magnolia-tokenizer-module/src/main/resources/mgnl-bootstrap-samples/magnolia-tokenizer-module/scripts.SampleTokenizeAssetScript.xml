@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><sv:node xmlns:sv="http://www.jcp.org/jcr/sv/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" sv:name="SampleTokenizeAssetScript"><sv:property sv:name="jcr:primaryType" sv:type="Name"><sv:value>mgnl:content</sv:value></sv:property><sv:property sv:name="jcr:uuid" sv:type="String"><sv:value>9ed24376-0be1-406a-83fe-3631dfe7ea0d</sv:value></sv:property><sv:property sv:name="mgnl:created" sv:type="Date"><sv:value>2021-12-14T17:00:50.617+01:00</sv:value></sv:property><sv:property sv:name="mgnl:createdBy" sv:type="String"><sv:value>superuser</sv:value></sv:property><sv:property sv:name="mgnl:lastModified" sv:type="Date"><sv:value>2021-12-28T13:49:36.388+01:00</sv:value></sv:property><sv:property sv:name="mgnl:lastModifiedBy" sv:type="String"><sv:value>superuser</sv:value></sv:property><sv:property sv:name="script" sv:type="Boolean"><sv:value>true</sv:value></sv:property><sv:property sv:name="text" sv:type="String"><sv:value>import info.magnolia.objectfactory.Components
+    import org.formentor.magnolia.tokenizer.service.AssetTokenizerService
+    import info.magnolia.dam.templating.functions.DamTemplatingFunctions
+
+    componentProvider = Components.getComponentProvider()
+    dam = componentProvider.getComponent(DamTemplatingFunctions.class)
+    assetTokenizer = componentProvider.getComponent(AssetTokenizerService.class)
+
+    asset = dam.getAsset("jcr:578569ae-f013-4de2-bb32-c21d93ad5273")
+    future = assetTokenizer.tokenizeAsset(asset)
+    cid = future.get()
+    println "CID:" + cid
+</sv:value></sv:property></sv:node>

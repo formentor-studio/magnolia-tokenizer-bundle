@@ -1,0 +1,6 @@
+title: nft
+templateScript: /nft-holder/templates/pages/nft.ftl
+renderType: freemarker
+dialog: nft-holder:pages/nft
+visible: true
+
