@@ -94,7 +94,7 @@ Add the dependency with the module *magnolia-tokenizer-module*
 #### Ethereum host address
 The url of the node or gateway that will receive the Ethereum transactions -e.g. creation of smart contracts and minting of assets - is specified by the environment variable ETHEREUM_ADDRESS. 
 > Example
-> http://besu:8545
+> https://rinkeby.infura.io/v3/<PROJECT_ID>
 
 #### Ethereum account
 The private key of the account that will send transactions to Ethereum is specified by the env. variable ETHEREUM_ACCOUNT.
@@ -104,16 +104,20 @@ The private key of the account that will send transactions to Ethereum is specif
 #### Ipfs address
 The address of the host or gateway that will receive requests to add files in IPFS is specified by the env. variable IPFS_ADDRESS.
 > Example
-> "/dns6/ipfs/tcp/5001/http"
+> "/dns6/ipfs.infura.io/tcp/5001/https"
 
 ## How to
 
 ###  How to download asset from ipfs
 - Using a browser
 ```shell
+# Local IPFS gateway
 $ curl -O http://127.0.0.1:8080/ipfs/QmRAncfPWaSCjRwfHnsG2jwYFuRAcNCWsMbf8iQB5ZcKE7/robot-1.jpg
+
+# Public IPFS gateway provided by infura
+$ curl -O https://ipfs.infura.io/ipfs/QmRAncfPWaSCjRwfHnsG2jwYFuRAcNCWsMbf8iQB5ZcKE7/robot-1.jpg
 ```
-- Using the client of ipfs 
+- Using the client of ipfs
 ```shell
 $ docker exec magnolia-tokenizer-bundle-magnolia-1 cat /ipfs/QmRAncfPWaSCjRwfHnsG2jwYFuRAcNCWsMbf8iQB5ZcKE7/robot-1.jpg > image.jpg
 ```
