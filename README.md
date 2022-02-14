@@ -71,6 +71,7 @@ The following diagram shows the dependency between artifacts of the project
 > **tokenizer**
 > 
 > Library that implements the integration with blockchain network and the distributed filesystem.
+> This library includes the source code of smart contracts and the process of compilation.
 
 > **org.web3:core**
 > 
